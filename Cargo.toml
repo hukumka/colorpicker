@@ -1,0 +1,10 @@
+[package]
+name = "colorpick"
+version = "0.1.0"
+authors = ["hukumka"]
+edition = "2018"
+
+[dependencies]
+yansi = "0.5"
+structopt = "0.2"
+reformation = "0.4"
