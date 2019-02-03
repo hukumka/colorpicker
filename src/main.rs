@@ -1,3 +1,13 @@
+//!
+//! Simple utility to inspect terminal colorscheme
+//!
+//! usage:
+//!
+//! `colorpick 1 2 5..9`
+//!
+//! will display terminal colors with id 1, 2, 5, 6, 7, 8, 9
+//!
+
 use reformation::Reformation;
 use std::str::FromStr;
 use structopt::StructOpt;
@@ -5,9 +15,9 @@ use yansi::{Color, Paint};
 
 #[derive(Reformation, Debug)]
 enum ColorRange {
-    #[reformation(r"\A{}\z")]
+    #[reformation(r"{}")]
     Fixed(u8),
-    #[reformation(r"\A{}..{}\z")]
+    #[reformation(r"{}..{}")]
     Range(u8, u8),
 }
 
